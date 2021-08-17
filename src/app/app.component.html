@@ -30,9 +30,10 @@
     </a>
     
     <ng-container *ngIf="authService.isLoggedIn">
-      <span class="text-light">{{authService.username}}</span>
+      <img width="40" class="rounded-circle" alt="{{authService.userName}}" src="{{authService.userAvatar}}"/>
+      <span class="text-light">{{authService.userName}}</span>
       <form action="/auth/logout" method="post">
-        <button type="submit" class="btn btn-sm text-light" (click)="logout()">Logout</button>
+        <button type="submit" class="btn btn-sm text-light">Logout</button>
       </form>
     </ng-container>
 </div>

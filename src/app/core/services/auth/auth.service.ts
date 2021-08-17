@@ -24,8 +24,12 @@ export class AuthService {
     return this.getUser() ? true : false;
   }
 
-  get username(): boolean {
+  get userName(): boolean {
     return this.getUser() ? this.getUser().name : '';
+  }
+
+  get userAvatar(): boolean {
+    return this.getUser() ? this.getUser().avatar : '';
   }
 
   logout() {
